@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações | GrahanIA</title>
+
+    <!-- Framework CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-layout">
+
+        <!-- Menu lateral -->
+        <aside class="sidebar">
+            <div>
+                <a href="dashboard.html" class="sidebar-logo">
+                    <img src="img/logo.png" alt="Logotipo da GrahanIA">
+                    <h2>GrahanIA</h2>
+                </a>
+
+                <a href="#nova-transacao" class="new-chat">+ Nova transação</a>
+
+                <nav class="history">
+                    <h3>Atalhos</h3>
+                    <a href="#historico" class="active">Histórico do mês</a>
+                    <a href="#nova-transacao">Cadastrar entrada</a>
+                    <a href="#nova-transacao">Cadastrar despesa</a>
+                    <a href="#insight-ia">Insight da IA</a>
+                </nav>
+            </div>
+
+            <a href="dashboard.html" class="sidebar-bottom-link">← Voltar ao dashboard</a>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="page-content">
+
+            <!-- Menu superior -->
+            <nav class="system-top-menu">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transacoes.html" class="active">Transações</a>
+                <a href="fechamento.html">Fechamento</a>
+                <a href="consultor.html">Consultor IA</a>
+            </nav>
+
+            <header class="page-header">
+                <div>
+                    <h1>Transações</h1>
+                    <p>Registre entradas e saídas com organização e clareza.</p>
+                </div>
+
+                <div class="page-actions">
+                    <button class="date-button">Maio de 2026</button>
+                    <a href="#nova-transacao" class="new-button">+ Novo lançamento</a>
+                </div>
+            </header>
+
+            <section class="cards-row">
+                <article class="money-card">
+                    <div>
+                        <p>Entradas do mês</p>
+                        <h2>R$ 6.250</h2>
+                        <small>8 lançamentos confirmados</small>
+                    </div>
+                    <div class="card-icon azul">+</div>
+                </article>
+
+                <article class="money-card">
+                    <div>
+                        <p>Saídas do mês</p>
+                        <h2>R$ 2.410</h2>
+                        <small>14 despesas categorizadas</small>
+                    </div>
+                    <div class="card-icon cinza">-</div>
+                </article>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="ia-card" id="insight-ia">
+                    <h2>Sua IA encontrou uma chance de economia.</h2>
+                    <p>
+                        Sua despesa com alimentação subiu 10% neste mês.
+                        Reduzindo pedidos por aplicativo, você pode economizar cerca de
+                        R$ 120 até o fim do mês.
+                    </p>
+
+                    <div class="ia-stats">
+                        <div>
+                            <span>Economia sugerida</span>
+                            <strong>R$ 120</strong>
+                        </div>
+
+                        <div>
+                            <span>Risco no orçamento</span>
+                            <strong>Moderado</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <section class="chart-card" id="nova-transacao">
+                    <div class="chart-header">
+                        <p>Cadastro</p>
+                        <h2>Nova transação</h2>
+                    </div>
+
+                    <!-- Formulário com 5 campos e 1 botão -->
+                    <form action="#" method="post">
+                        <div class="form-grid">
+                            <div>
+                                <label for="tipo-transacao">Tipo</label>
+                                <select id="tipo-transacao" name="tipo" class="form-field" required>
+                                    <option value="">Selecione</option>
+                                    <option value="entrada">Entrada</option>
+                                    <option value="saida">Saída</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="valor-transacao">Valor</label>
+                                <input type="text" id="valor-transacao" name="valor" class="form-field" placeholder="R$ 0,00" required>
+                            </div>
+
+                            <div>
+                                <label for="categoria-transacao">Categoria</label>
+                                <select id="categoria-transacao" name="categoria" class="form-field" required>
+                                    <option value="">Selecione</option>
+                                    <option value="salario">Salário</option>
+                                    <option value="alimentacao">Alimentação</option>
+                                    <option value="transporte">Transporte</option>
+                                    <option value="moradia">Moradia</option>
+                                    <option value="lazer">Lazer</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="data-transacao">Data</label>
+                                <input type="date" id="data-transacao" name="data" class="form-field" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="descricao-transacao">Descrição</label>
+                            <input type="text" id="descricao-transacao" name="descricao" class="form-field" placeholder="Ex.: mercado da semana" required>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary new-button">Salvar transação</button>
+                            <button type="reset" class="btn btn-outline-light date-button">Limpar</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="chart-card" id="historico">
+                    <div class="chart-header">
+                        <p>Histórico</p>
+                        <h2>Lançamentos recentes</h2>
+                    </div>
+
+                    <div class="transaction-list">
+                        <article>
+                            <h3>Salário mensal</h3>
+                            <p>Entrada registrada em 10/05/2026 no valor de R$ 5.200,00.</p>
+                        </article>
+
+                        <article>
+                            <h3>Supermercado</h3>
+                            <p>Despesa de alimentação registrada em 09/05/2026 no valor de R$ 248,90.</p>
+                        </article>
+
+                        <article>
+                            <h3>Aplicativo de transporte</h3>
+                            <p>Despesa de transporte registrada em 08/05/2026 no valor de R$ 64,40.</p>
+                        </article>
+                    </div>
+                </article>
+
+                <article class="chart-card">
+                    <div class="chart-header">
+                        <p>Categorias</p>
+                        <h2>Distribuição</h2>
+                    </div>
+
+                    <div class="ia-stats simple-stats">
+                        <div>
+                            <span>Alimentação</span>
+                            <strong>R$ 820</strong>
+                        </div>
+
+                        <div>
+                            <span>Transporte</span>
+                            <strong>R$ 360</strong>
+                        </div>
+
+                        <div>
+                            <span>Moradia</span>
+                            <strong>R$ 950</strong>
+                        </div>
+
+                        <div>
+                            <span>Lazer</span>
+                            <strong>R$ 280</strong>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p>© 2026 GrahanIA - Controle de transações</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

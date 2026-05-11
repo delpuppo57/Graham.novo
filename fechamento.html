@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechamento | GrahanIA</title>
+
+    <!-- Framework CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-layout">
+
+        <!-- Menu lateral -->
+        <aside class="sidebar">
+            <div>
+                <a href="dashboard.html" class="sidebar-logo">
+                    <img src="img/logo.png" alt="Logotipo da GrahanIA">
+                    <h2>GrahanIA</h2>
+                </a>
+
+                <a href="#exportar-ciclo" class="new-chat">Exportar ciclo</a>
+
+                <nav class="history">
+                    <h3>Fechamentos</h3>
+                    <a href="#ciclo-atual" class="active">Ciclo atual</a>
+                    <a href="#cronograma">Cronograma de ciclos</a>
+                    <a href="#resumo-fechamento">Resumo do mês</a>
+                    <a href="#pendencias">Pendências</a>
+                </nav>
+            </div>
+
+            <a href="dashboard.html" class="sidebar-bottom-link">← Voltar ao dashboard</a>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="page-content">
+
+            <!-- Menu superior -->
+            <nav class="system-top-menu">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transacoes.html">Transações</a>
+                <a href="fechamento.html" class="active">Fechamento</a>
+                <a href="consultor.html">Consultor IA</a>
+            </nav>
+
+            <header class="page-header">
+                <div>
+                    <h1>Fechamento</h1>
+                    <p>Organize o ciclo mensal e exporte os lançamentos consolidados.</p>
+                </div>
+
+                <div class="page-actions">
+                    <button class="date-button">Maio de 2026</button>
+                </div>
+            </header>
+
+            <section class="fechamento-hero" id="ciclo-atual">
+                <div>
+                    <p>Ciclo atual</p>
+                    <h2>maio 2026</h2>
+                    <span>32 lançamentos conferidos antes do fechamento.</span>
+                </div>
+
+                <a href="#" class="fechamento-export" id="exportar-ciclo">Exportar para Excel CSV</a>
+            </section>
+
+            <section class="cards-row" id="resumo-fechamento">
+                <article class="money-card">
+                    <div>
+                        <p>Entradas confirmadas</p>
+                        <h2>R$ 6.250</h2>
+                        <small>8 lançamentos no ciclo</small>
+                    </div>
+                    <div class="card-icon azul">+</div>
+                </article>
+
+                <article class="money-card">
+                    <div>
+                        <p>Saídas confirmadas</p>
+                        <h2>R$ 2.410</h2>
+                        <small>14 despesas no ciclo</small>
+                    </div>
+                    <div class="card-icon cinza">-</div>
+                </article>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="ia-card" id="pendencias">
+                    <h2>Antes de fechar o mês, revise os gastos sem categoria.</h2>
+
+                    <p>
+                        A IA encontrou 3 lançamentos pendentes.
+                        Classificar esses registros melhora o relatório final e ajuda
+                        a comparar os próximos ciclos.
+                    </p>
+
+                    <div class="ia-stats">
+                        <div>
+                            <span>Pendências</span>
+                            <strong>3</strong>
+                        </div>
+
+                        <div>
+                            <span>Saldo final</span>
+                            <strong>R$ 3.840</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="chart-card">
+                    <div class="chart-header">
+                        <p>Status do ciclo</p>
+                        <h2>Pronto para revisar</h2>
+                    </div>
+
+                    <div class="checklist">
+                        <p>Receitas conferidas</p>
+                        <p>Despesas categorizadas</p>
+                        <p>Carteiras sincronizadas</p>
+                        <p>Relatório pronto para exportação</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="chart-card fechamento-section" id="cronograma">
+                <div class="chart-header">
+                    <p>Cronograma</p>
+                    <h2>Ciclos projetados</h2>
+                </div>
+
+                <div class="fechamento-grid">
+                    <article class="fechamento-card">
+                        <header>
+                            <div>
+                                <h3>Janeiro 2027</h3>
+                                <p>1 lançamento previsto</p>
+                            </div>
+                            <span>Projetado</span>
+                        </header>
+
+                        <div class="fechamento-metrics">
+                            <div>
+                                <p>Balanço</p>
+                                <strong>-R$ 220,00</strong>
+                            </div>
+                            <div>
+                                <p>Saídas</p>
+                                <strong>R$ 220,00</strong>
+                            </div>
+                        </div>
+
+                        <a href="#">Baixar planilha</a>
+                    </article>
+
+                    <article class="fechamento-card">
+                        <header>
+                            <div>
+                                <h3>Dezembro 2026</h3>
+                                <p>1 lançamento previsto</p>
+                            </div>
+                            <span>Projetado</span>
+                        </header>
+
+                        <div class="fechamento-metrics">
+                            <div>
+                                <p>Balanço</p>
+                                <strong>-R$ 220,00</strong>
+                            </div>
+                            <div>
+                                <p>Saídas</p>
+                                <strong>R$ 220,00</strong>
+                            </div>
+                        </div>
+
+                        <a href="#">Baixar planilha</a>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>© 2026 GrahanIA - Fechamento financeiro mensal</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
